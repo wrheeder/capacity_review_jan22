@@ -24,7 +24,7 @@ var lyr_UMTS_HM_1 = new ol.layer.Vector({
                 source:jsonSource_UMTS_HM_1, 
                 style: style_UMTS_HM_1,
                 interactive: false,
-    title: 'UMTS_HM<br />\
+    title: 'UMTS Users<br />\
     <img src="styles/legend/UMTS_HM_1_0.png" /> 0 - 5<br />\
     <img src="styles/legend/UMTS_HM_1_1.png" /> 5 - 10<br />\
     <img src="styles/legend/UMTS_HM_1_2.png" /> 10 - 20<br />\
@@ -43,7 +43,7 @@ var lyr_USR_Jan_12000_20k_2 = new ol.layer.Vector({
                 source:jsonSource_USR_Jan_12000_20k_2, 
                 style: style_USR_Jan_12000_20k_2,
                 interactive: false,
-    title: 'USR_Jan_12000_20k<br />\
+    title: 'UMTS User Heatmap<br />\
     <img src="styles/legend/USR_Jan_12000_20k_2_0.png" /> Very Low<br />\
     <img src="styles/legend/USR_Jan_12000_20k_2_1.png" /> Low<br />\
     <img src="styles/legend/USR_Jan_12000_20k_2_2.png" /> Medium<br />\
@@ -62,7 +62,7 @@ var lyr_LTE_HM_3 = new ol.layer.Vector({
                 source:jsonSource_LTE_HM_3, 
                 style: style_LTE_HM_3,
                 interactive: false,
-    title: 'LTE_HM<br />\
+    title: 'LTE PRB Utilization<br />\
     <img src="styles/legend/LTE_HM_3_0.png" /> 0 - 10<br />\
     <img src="styles/legend/LTE_HM_3_1.png" /> 10 - 29<br />\
     <img src="styles/legend/LTE_HM_3_2.png" /> 29 - 49<br />\
@@ -81,7 +81,7 @@ var lyr_PRB_Jan_4500_20k_4 = new ol.layer.Vector({
                 source:jsonSource_PRB_Jan_4500_20k_4, 
                 style: style_PRB_Jan_4500_20k_4,
                 interactive: false,
-    title: 'PRB_Jan_4500_20k<br />\
+    title: 'LTE PRB Heatmap<br />\
     <img src="styles/legend/PRB_Jan_4500_20k_4_0.png" /> Very Low<br />\
     <img src="styles/legend/PRB_Jan_4500_20k_4_1.png" /> Low<br />\
     <img src="styles/legend/PRB_Jan_4500_20k_4_2.png" /> Medium<br />\
