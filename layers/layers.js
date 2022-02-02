@@ -48,7 +48,7 @@ var lyr_USR_Jan_12000_20k_2 = new ol.layer.Vector({
     <img src="styles/legend/USR_Jan_12000_20k_2_1.png" /> Low<br />\
     <img src="styles/legend/USR_Jan_12000_20k_2_2.png" /> Medium<br />\
     <img src="styles/legend/USR_Jan_12000_20k_2_3.png" /> High<br />\
-    <img src="styles/legend/USR_Jan_12000_20k_2_4.png" /> Vwry High<br />'
+    <img src="styles/legend/USR_Jan_12000_20k_2_4.png" /> Very High<br />'
         });
 var format_LTE_HM_3 = new ol.format.GeoJSON();
 var features_LTE_HM_3 = format_LTE_HM_3.readFeatures(json_LTE_HM_3, 
