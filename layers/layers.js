@@ -142,9 +142,35 @@ var lyr_TransitionPolygons_2 = new ol.layer.Vector({
         });
 
 lyr_2YearPlanSiteLevel_Arvin20220125Sheet1_1.setVisible(true);lyr_TransitionPolygons_2.setVisible(true);
+var format_RNCBound_V13_0 = new ol.format.GeoJSON();
+var features_RNCBound_V13_0 = format_RNCBound_V13_0.readFeatures(json_RNCBound_V13_0, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_RNCBound_V13_0 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_RNCBound_V13_0.addFeatures(features_RNCBound_V13_0);
+var lyr_RNCBound_V13_0 = new ol.layer.Vector({
+                declutter: true,
+                source:jsonSource_RNCBound_V13_0, 
+                style: style_RNCBound_V13_0,
+                interactive: false,
+    title: 'RNCBound_V13<br />\
+    <img src="styles/legend/RNCBound_V13_0_0.png" /> 202202<br />\
+    <img src="styles/legend/RNCBound_V13_0_1.png" /> 202203<br />\
+    <img src="styles/legend/RNCBound_V13_0_2.png" /> 202204<br />\
+    <img src="styles/legend/RNCBound_V13_0_3.png" /> 202205<br />\
+    <img src="styles/legend/RNCBound_V13_0_4.png" /> 202206<br />\
+    <img src="styles/legend/RNCBound_V13_0_5.png" /> 202207<br />\
+    <img src="styles/legend/RNCBound_V13_0_6.png" /> 202208<br />\
+    <img src="styles/legend/RNCBound_V13_0_7.png" /> 202209<br />\
+    <img src="styles/legend/RNCBound_V13_0_8.png" /> 202210<br />\
+    <img src="styles/legend/RNCBound_V13_0_9.png" /> 202211<br />\
+    <img src="styles/legend/RNCBound_V13_0_10.png" /> done<br />'
+        });
 
+lyr_RNCBound_V13_0.setVisible(true);
 lyr_ESRITOPO_0.setVisible(true);lyr_UMTS_HM_1.setVisible(false);lyr_USR_Jan_12000_20k_2.setVisible(false);lyr_LTE_HM_3.setVisible(true);lyr_PRB_Jan_4500_20k_4.setVisible(true);
-var layersList = [lyr_ESRITOPO_0,lyr_UMTS_HM_1,lyr_USR_Jan_12000_20k_2,lyr_LTE_HM_3,lyr_PRB_Jan_4500_20k_4,lyr_2YearPlanSiteLevel_Arvin20220125Sheet1_1,lyr_TransitionPolygons_2];
+var layersList = [lyr_ESRITOPO_0,lyr_UMTS_HM_1,lyr_USR_Jan_12000_20k_2,lyr_LTE_HM_3,lyr_PRB_Jan_4500_20k_4,lyr_2YearPlanSiteLevel_Arvin20220125Sheet1_1,lyr_RNCBound_V13_0];
 lyr_UMTS_HM_1.set('fieldAliases', {'field_1': 'field_1', 'H': 'H', 'CELL_NAME': 'CELL_NAME', 'AVG_USER': 'AVG_USER', 'VOL_MB': 'VOL_MB', 'pid': 'pid', 'SITE_CODE': 'SITE_CODE', 'area_name': 'area_name', 'x': 'x', 'y': 'y', });
 lyr_USR_Jan_12000_20k_2.set('fieldAliases', {'fid': 'fid', 'ID': 'ID', 'ELEV': 'ELEV', });
 lyr_LTE_HM_3.set('fieldAliases', {'field_1': 'field_1', 'H': 'H', 'E_CELL_NAM': 'E_CELL_NAM', 'DL_RESOURC': 'DL_RESOURC', 'DL_TRAFFIC': 'DL_TRAFFIC', 'pid': 'pid', 'SITE_CODE': 'SITE_CODE', 'area_name': 'area_name', 'x': 'x', 'y': 'y', });
@@ -167,5 +193,11 @@ lyr_TransitionPolygons_2.set('fieldImages', {'Property ID': 'TextEdit', 'Site Na
 lyr_2YearPlanSiteLevel_Arvin20220125Sheet1_1.set('fieldLabels', {'Property ID': 'no label', 'Site Name': 'no label', 'Contract Site ID': 'no label', 'MLOG Confirmation': 'no label', 'CGI Confirmation': 'no label', 'Legal Lease DB': 'no label', 'Property Validation DB': 'no label', 'Controller ID': 'no label', 'New Transition Monthly Plan - 3 year': 'no label', 'New Transition Monthly Plan - 2 year': 'no label', 'mnt': 'no label', 'mnt1': 'no label', 'Field15': 'no label', 'Field16': 'no label', 'Field17': 'no label', });
 lyr_TransitionPolygons_2.set('fieldLabels', {'Property ID': 'no label', 'Site Name': 'no label', 'Contract Site ID': 'no label', 'MLOG Confirmation': 'no label', 'CGI Confirmation': 'no label', 'Legal Lease DB': 'no label', 'Property Validation DB': 'no label', 'Controller ID': 'no label', 'New Transition Monthly Plan - 3 year': 'no label', 'New Transition Monthly Plan - 2 year': 'no label', 'mnt': 'no label', 'mnt1': 'no label', 'Field15': 'no label', 'Field16': 'no label', 'Field17': 'no label', });
 lyr_TransitionPolygons_2.on('precompose', function(evt) {
+    evt.context.globalCompositeOperation = 'normal';
+});
+lyr_RNCBound_V13_0.set('fieldAliases', {'id': 'id', 'rncname': 'rncname', 'rncid': 'rncid', 'rank': 'rank', 'area': 'area', 'mnt': 'mnt', });
+lyr_RNCBound_V13_0.set('fieldImages', {'id': 'Range', 'rncname': 'TextEdit', 'rncid': 'Range', 'rank': 'Range', 'area': 'TextEdit', 'mnt': 'TextEdit', });
+lyr_RNCBound_V13_0.set('fieldLabels', {'id': 'no label', 'rncname': 'no label', 'rncid': 'no label', 'rank': 'no label', 'area': 'no label', 'mnt': 'no label', });
+lyr_RNCBound_V13_0.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
